@@ -1,19 +1,19 @@
-    # FROM node
+    FROM node
     
-    # RUN apt-get update && apt-get upgrade -y \
-    #     && apt-get clean
+    RUN apt-get update && apt-get upgrade -y \
+        && apt-get clean
     
-    # RUN mkdir /app
-    # WORKDIR /app
+    RUN mkdir /app
+    WORKDIR /app
     
-    # COPY package*.json /app/
+    COPY package*.json /app/
     
-    # RUN npm install
+    RUN npm install
     
-    # COPY src /app/src
+    COPY src /app/src
     
-    # EXPOSE 3000
+    EXPOSE 3000
     
-    # CMD [ "npm", "start" ]
+    CMD [ "npm", "start" ]
     
     
